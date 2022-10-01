@@ -1,0 +1,47 @@
+    \section{Purpose}
+        This style is created for writing notes, and it is designed to reduce eye strain when reading PDFs.
+    \section{Colors}
+        Colors are inspired by GruvBox and JetBrains Dracula themes, but with WarmBox does its own thing: it doesn't use white color, because I consider it too aggressive and 
+        there is no red in "normal" text - it is only allowed in errors.
+    \section{Looks}
+        \subsection{Code Block}
+            \begin{lstlisting}[style=myjava]
+                import java.util.stream.*;  
+                public class JavaStreamExample { 
+                    // comment
+                    public static void main(String[] args){  
+                        Stream.iterate(1, element -> element + 1)  
+                        .filter(element -> element % 5 == 0)  
+                        .limit(5)  
+                        .forEach(System.out::println);  
+
+                        int i = 1
+                        System.out.println("String Example" + i);
+                    }  
+                
+            \end{lstlisting}
+
+        \subsection{Code Output}
+        \begin{lstlisting}[style=myout]
+            5
+            10
+            15
+            20
+            25   
+            String Example 1        
+        \end{lstlisting}
+        \subsection{Important Frame}
+        
+        \begin{mdframed}[style=important]
+            
+            
+            Hiding internal state and requiring all interaction to be performed through an object's methods is known as
+            \textbf{\textit{data encapsulation}} - a fundamental principle of object-oriented programming.
+        \end{mdframed}
+
+
+
+
+        
+    
+

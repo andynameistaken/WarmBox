@@ -1,0 +1,155 @@
+%\documentclass[oneside]{memoir}
+%\documentclass[a4paper]{article}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{warmbox}
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+\pretolerance=1000
+
+
+
+%\usepackage[T1]{fontenc}
+%\usepackage{newpxtext,eulerpx}
+
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+\usepackage{anyfontsize}
+\usepackage{sansmathfonts}
+% \usepackage{anyfontsize} 
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+\usepackage{inconsolata}
+
+%\usepackage[sfdefault,thin]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+%\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+
+\usepackage{graphicx} % for images
+\graphicspath{ {../images/} }
+\usepackage{enumitem} % adds styles to decription (allows to create description lists with newline characters)
+\usepackage{amsmath} % math
+\usepackage{amsfonts} % math fonts, ex whole numbers
+\usepackage{csquotes} % quotations
+\usepackage{tabularx}  % column type (which adds filling space).
+
+
+
+
+
+
+
+
+
+%=============================================== Frame Settings ======================================================%
+\usepackage[framemethod=TikZ]{mdframed} % frame environment
+
+%==== Important Frame ====%
+\mdfdefinestyle{important} {
+    middlelinecolor=darkgray,
+    middlelinewidth=2pt,
+    fontcolor=light_orange,
+    backgroundcolor=brownish_gray,
+    roundcorner=10pt
+}
+
+%==== Code Frame ====%
+\mdfdefinestyle{output} {
+    fontcolor=pgreen
+}
+%\mdfsetup{%
+%    middlelinecolor=darkgray,
+%    middlelinewidth=2pt,
+%    fontcolor=light_orange,
+%    backgroundcolor=brownish_gray,
+%    roundcorner=10pt}
+%\usepackage[parfill]{parskip}
+
+
+%=============================================== Page Style ==========================================================%
+
+%\renewcommand{\topfraction}{.85}
+%\renewcommand{\bottomfraction}{.7}
+%\renewcommand{\textfraction}{.15}
+%\renewcommand{\floatpagefraction}{.66}
+%\renewcommand{\dbltopfraction}{.66}
+%\renewcommand{\dblfloatpagefraction}{.66}
+%\setcounter{topnumber}{9}
+%\setcounter{bottomnumber}{
+%\setcounter{totalnumber}{20}
+%\setcounter{dbltopnumber}{9}
+%============================================== Colors ===============================================================%
+
+\usepackage{xcolor}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{beige}{HTML}{e1c699}
+\definecolor{pgreen}{HTML}{1d5239}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{palered}{HTML}{AA434E}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{light_green}{HTML}{698069}
+\definecolor{dark_gray}{HTML}{1f241f}
+\definecolor{light_orange}{HTML}{ba6f4e}
+\definecolor{brownish_gray}{HTML}{3b312e}
+\color{beige}
+\pagecolor{dark_gray}
+
+
+%=============================================== Listing Prefs =======================================================%
+\usepackage{listings}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{color}
+\usepackage{biblatex}
+
+%==== Java Listings ====%
+\lstdefinestyle{myjava}{language=Java,
+    basicstyle=\ttfamily,
+    frame=tb,
+    aboveskip=3mm,
+    belowskip=3mm,
+    columns=flexible,
+    numbers=left,
+%    basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+    basicstyle={\small\ttfamily},
+    numberstyle=\tiny\color{gray}\texttt,
+%    numbersep=5pt,                  % how far the line-numbers are from the code
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{light_orange},
+    stringstyle=\color{olive},
+    moredelim=[il][\textcolor{pgreen}]{\#\#},
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%},
+%    inputpath=../src
+}
+\lstdefinestyle{myout}
+{
+    language={},
+    basicstyle=\ttfamily,
+    frame=shadowbox,
+    breaklines=true
+}
+\lstdefinestyle{err}{
+    language={},
+    basicstyle=\ttfamily\color{palered},
+    frame=shadowbox,
+    breaklines=true,
+}
+
+\setlist[description]{style=nextline}
+
+\title{WarmBox Color Sceme}
+\author{Author: Andrzej Zahorski}
+
+
+%=============================================== Commands =======================================================%
+%  shorter texttt
+\newcommand{\kword}[1]{{\color{light_orange}\texttt{#1}}}
+\newcommand{\monobold}[1]{\textbf{\texttt{#1}}}
+
+
+
+
